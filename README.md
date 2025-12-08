@@ -49,8 +49,8 @@ Modellerin 30 epoch boyunca eğitilmesinin ardından test setinde elde edilen so
 
 | Model Mimarisi | Omurga (Backbone) | Dice Skoru | IoU Skoru |
 |----------------|-------------------|------------|-----------|
-| **U-Net** | ResNet34 | 0.9946  | 0.8823  |
-| **U-Net++** | ResNet34 | 0.9943 | 0.8775 |
+| **U-Net** | ResNet34 | 0.9353  | 0.8823  |
+| **U-Net++** | ResNet34 | 0.9324 | 0.8775 |
 
 
 *(Not: U-Net++, özellikle miyokard sınır detaylarını yakalamada üstün performans göstermiştir.)*
@@ -108,8 +108,8 @@ After training the models for 30 epochs, the following results were obtained on 
 
 | Model Architecture | Backbone | Dice Score | IoU Score |
 |--------------------|----------|------------|-----------|
-| **U-Net** | ResNet34 | 0.9946  | 0.8823  |
-| **U-Net++** | ResNet34 | 0.9943 | 0.8775 |
+| **U-Net** | ResNet34 | 0.9353  | 0.8823  |
+| **U-Net++** | ResNet34 | 0.9324 | 0.8775 |
 
 *(Note: U-Net++ demonstrated superior performance in capturing boundary details, specifically for the Myocardium.)*
 
