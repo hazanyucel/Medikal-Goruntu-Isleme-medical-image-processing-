@@ -62,11 +62,11 @@ Here are some qualitative results comparing the **Ground Truth** (Radiologist's 
 
 ### U-Net++ Predictions
 ![U-Net++ Result](https://github.com/hazanyucel/Medikal-Goruntu-Isleme-medical-image-processing-/blob/main/images/ornek_resim_1.png)
-*Figure 1: Successful segmentation of RV, Myo, and LV.*
+
 
 ### Comparative View
 ![Comparison](https://github.com/hazanyucel/Medikal-Goruntu-Isleme-medical-image-processing-/blob/main/images/ornek_resim_2.png)
-*Figure 2: Comparison of difficult slices.*
+
 
 ---
 
