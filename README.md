@@ -1,3 +1,64 @@
+#  Otomatik Kardiyak Teşhis Yarışması (ACDC) - Segmentasyon Projesi
+
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange)
+![Lisans](https://img.shields.io/badge/License-MIT-green)
+
+##  Proje Özeti
+Bu proje, ACDC (Automated Cardiac Diagnosis Challenge) veri setini kullanarak **kardiyak MR görüntülerinin anlamsal segmentasyonuna** odaklanmaktadır. Amaç, kalp patolojilerinin teşhisine yardımcı olmak için kalbin üç temel yapısını otomatik olarak bölümlemektir (segmentasyon).
+
+Bu medikal görüntüleme görevi için en iyi performansı gösteren modeli belirlemek amacıyla **5 farklı derin öğrenme mimarisi** uygulanmış ve karşılaştırılmıştır.
+
+###  Segmentasyon Sınıfları
+Modeller aşağıdaki 4 sınıfı ayırt etmek üzere eğitilmiştir:
+0. **Arka Plan (Background)**
+1. **Sağ Ventrikül (RV)**
+2. **Miyokard - Kalp Kası (Myo)**
+3. **Sol Ventrikül (LV)**
+
+---
+
+##  Metodoloji
+
+### 1. Veri Seti ve Ön İşleme
+Veri seti 3 boyutlu NIfTI/H5 hacimlerinden oluşmaktadır. Aşağıdaki ön işleme adımları uygulanmıştır:
+* **Dilimleme (Slicing):** 3D hacimler 2D görüntülere ayrıldı.
+* **Filtreleme:** Eğitimi optimize etmek için boş maskeler veri setinden çıkarıldı.
+* **Yeniden Boyutlandırma:** Görüntüler `128x128` boyutuna getirildi (değiştirilebilir).
+* **Normalizasyon:** Piksel yoğunlukları [0, 1] aralığına ölçeklendi.
+* **One-Hot Encoding:** Maskeler kategorik formata dönüştürüldü.
+
+### 2. Uygulanan Mimariler
+Adil bir karşılaştırma sağlamak için tüm modellerde `segmentation-models` kütüphanesi kullanılmış ve omurga (backbone) olarak **ResNet34** (ImageNet üzerinde ön eğitimli) seçilmiştir:
+
+1.  **U-Net:** Medikal görüntü segmentasyonu için altın standart.
+2.  **U-Net++ (Nested U-Net):** İnce detayları yakalamak için yoğun atlama bağlantılarına sahip mimari.
+3.  **FPN (Feature Pyramid Network):** Farklı ölçeklerdeki nesneleri algılamak için idealdir.
+4.  **LinkNet:** Verimli ve hızlı bir mimari.
+5.  **PSPNet:** Global bağlamı anlamak için Piramit Sahne Ayrıştırma Ağı.
+
+### 3. Kayıp Fonksiyonu ve Metrikler
+* **Kayıp Fonksiyonu (Loss):** `Dice Loss` + `Categorical Focal Loss` (Sınıf dengesizliğini yönetmek için).
+* **Metrikler:** IoU (Intersection over Union), Dice Katsayısı, F1-Skoru, Doğruluk (Accuracy).
+
+---
+
+##  Karşılaştırmalı Sonuçlar
+
+Modellerin 30 epoch boyunca eğitilmesinin ardından test setinde elde edilen sonuçlar:
+
+| Model Mimarisi | Omurga (Backbone) | Dice Skoru | IoU Skoru |
+|----------------|-------------------|------------|-----------|
+| **U-Net** | ResNet34          | 0.XXX      | 0.8823    |
+| **U-Net++** | ResNet34          | **0.XXX** | **0.XXX** |
+| FPN            | ResNet34          | 0.XXX      | 0.XXX     |
+| LinkNet        | ResNet34          | 0.XXX      | 0.XXX     |
+| PSPNet         | ResNet34          | 0.XXX      | 0.XXX     |
+
+*(Not: U-Net++, özellikle miyokard sınır detaylarını yakalamada üstün performans göstermiştir.)*
+
+
+
 #  Automated Cardiac Diagnosis Challenge (ACDC) - Segmentation Project
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
