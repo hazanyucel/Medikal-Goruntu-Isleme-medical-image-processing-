@@ -54,21 +54,6 @@ After training the models for 30 epochs, the following results were obtained on 
 
 *(Note: U-Net++ demonstrated superior performance in capturing boundary details, specifically for the Myocardium.)*
 
----
-
-##  Visualizations
-
-Here are some qualitative results comparing the **Ground Truth** (Radiologist's annotation) vs. **Model Prediction**:
-
-### U-Net++ Predictions
-![U-Net++ Result](https://github.com/hazanyucel/Medikal-Goruntu-Isleme-medical-image-processing-/blob/main/images/ornek_resim_1.png)
-
-
-### Comparative View
-![Comparison](https://github.com/hazanyucel/Medikal-Goruntu-Isleme-medical-image-processing-/blob/main/images/ornek_resim_2.png)
-
-
----
 
 ##  Installation & Usage
 
