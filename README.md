@@ -1,15 +1,15 @@
-# 🫀 Automated Cardiac Diagnosis Challenge (ACDC) - Segmentation Project
+#  Automated Cardiac Diagnosis Challenge (ACDC) - Segmentation Project
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-## 📌 Project Overview
+##  Project Overview
 This project focuses on the **semantic segmentation of cardiac MRI images** using the ACDC (Automated Cardiac Diagnosis Challenge) dataset. The goal is to automatically segment three key structures of the heart to assist in the diagnosis of cardiac pathologies.
 
 We implementing and comparing **5 different deep learning architectures** to determine the best performing model for this medical imaging task.
 
-### 🎯 Segmentation Classes
+###  Segmentation Classes
 The models are trained to segment 4 classes:
 0. **Background**
 1. **Right Ventricle (RV)**
@@ -18,7 +18,7 @@ The models are trained to segment 4 classes:
 
 ---
 
-## 🏗️ Methodology
+##  Methodology
 
 ### 1. Dataset & Preprocessing
 The dataset consists of 3D NIfTI/H5 volumes. The following preprocessing steps were applied:
@@ -43,7 +43,7 @@ We utilized the `segmentation-models` library with **ResNet34** as the backbone 
 
 ---
 
-## 📊 Comparative Results
+##  Comparative Results
 
 After training the models for 30 epochs, the following results were obtained on the test set:
 
@@ -56,7 +56,7 @@ After training the models for 30 epochs, the following results were obtained on 
 
 ---
 
-## 🖼️ Visualizations
+##  Visualizations
 
 Here are some qualitative results comparing the **Ground Truth** (Radiologist's annotation) vs. **Model Prediction**:
 
@@ -70,7 +70,7 @@ Here are some qualitative results comparing the **Ground Truth** (Radiologist's 
 
 ---
 
-## 🚀 Installation & Usage
+##  Installation & Usage
 
 ### Prerequisites
 ```bash
