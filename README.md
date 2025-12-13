@@ -2,7 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange)
-![Lisans](https://img.shields.io/badge/License-MIT-green)
+
 
 ##  Proje Özeti
 Bu proje, ACDC (Automated Cardiac Diagnosis Challenge) veri setini kullanarak **kardiyak MR görüntülerinin anlamsal segmentasyonuna** odaklanmaktadır. Amaç, kalp patolojilerinin teşhisine yardımcı olmak için kalbin üç temel yapısını otomatik olarak bölümlemektir (segmentasyon).
@@ -61,7 +61,7 @@ Modellerin 30 epoch boyunca eğitilmesinin ardından test setinde elde edilen so
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange)
-![License](https://img.shields.io/badge/License-MIT-green)
+
 
 ##  Project Overview
 This project focuses on the **semantic segmentation of cardiac MRI images** using the ACDC (Automated Cardiac Diagnosis Challenge) dataset. The goal is to automatically segment three key structures of the heart to assist in the diagnosis of cardiac pathologies.
