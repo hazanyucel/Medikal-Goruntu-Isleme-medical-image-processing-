@@ -52,6 +52,7 @@ Modellerin 30 epoch boyunca eğitilmesinin ardından test setinde elde edilen so
 | **U-Net** | ResNet34 | 0.9353  | 0.8823  |
 | **U-Net++** | ResNet34 | 0.9324 | 0.8775 |
 
+| **TransU-Net** | ResNet34 | 0.9146 |  |
 
 *(Not: U-Net++, özellikle miyokard sınır detaylarını yakalamada üstün performans göstermiştir.)*
 
