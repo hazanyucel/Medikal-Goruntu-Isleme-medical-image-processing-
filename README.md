@@ -31,15 +31,14 @@ Veri seti 3 boyutlu NIfTI/H5 hacimlerinden oluşmaktadır. Aşağıdaki ön işl
 ### 2. Uygulanan Mimariler
 Adil bir karşılaştırma sağlamak için tüm modellerde `segmentation-models` kütüphanesi kullanılmış ve omurga (backbone) olarak **ResNet34** (ImageNet üzerinde ön eğitimli) seçilmiştir:
 
-1.  **U-Net:** Medikal görüntü segmentasyonu için altın standart.
-2.  **U-Net++ (Nested U-Net):** İnce detayları yakalamak için yoğun atlama bağlantılarına sahip mimari.
-3.  **FPN (Feature Pyramid Network):** Farklı ölçeklerdeki nesneleri algılamak için idealdir.
-4.  **LinkNet:** Verimli ve hızlı bir mimari.
-5.  **PSPNet:** Global bağlamı anlamak için Piramit Sahne Ayrıştırma Ağı.
-
+1.  **U-Net** 
+2.  **U-Net++ (Nested U-Net)** 
+3.  **TransUNet** 
+4.  **AttentionUNet** 
+5.  **ResUNet** 
 ### 3. Kayıp Fonksiyonu ve Metrikler
 * **Kayıp Fonksiyonu (Loss):** `Dice Loss` + `Categorical Focal Loss` (Sınıf dengesizliğini yönetmek için).
-* **Metrikler:** IoU (Intersection over Union), Dice Katsayısı, F1-Skoru, Doğruluk (Accuracy).
+*  Dice Katsayısı.
 
 ---
 
@@ -53,6 +52,7 @@ Modellerin 30 epoch boyunca eğitilmesinin ardından test setinde elde edilen so
 | **U-Net++** | ResNet34 | 0.9324 | 0.8775 |
 | **TransU-Net** | ResNet34 | 0.9146 |  |
 | **AttentionUNet** | ResNet34 | 0.9182 |  |
+| **ResUNEt** | ResNet34 | 0.8922 |  |
 
 
 *(Not: U-Net++, özellikle miyokard sınır detaylarını yakalamada üstün performans göstermiştir.)*
