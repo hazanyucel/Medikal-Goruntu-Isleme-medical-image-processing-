@@ -112,6 +112,10 @@ After training the models for 30 epochs, the following results were obtained on 
 |--------------------|----------|------------|-----------|
 | **U-Net** | ResNet34 | 0.9353  | 0.8823  |
 | **U-Net++** | ResNet34 | 0.9324 | 0.8775 |
+| **TransU-Net** | ResNet34 | 0.9146 |  |
+| **AttentionUNet** | ResNet34 | 0.9182 |  |
+| **ResUNEt** | ResNet34 | 0.8922 |  |
+|
 
 *(Note: U-Net++ demonstrated superior performance in capturing boundary details, specifically for the Myocardium.)*
 
