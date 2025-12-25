@@ -72,6 +72,7 @@ We implementing and comparing **5 different deep learning architectures** to det
 
 ###  Segmentation Classes
 The models are trained to segment 4 classes:
+##
 0. **Background**
 1. **Right Ventricle (RV)**
 2. **Myocardium (Myo)**
