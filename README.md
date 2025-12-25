@@ -10,7 +10,7 @@ Bu proje, ACDC (Automated Cardiac Diagnosis Challenge) veri setini kullanarak **
 Bu medikal görüntüleme görevi için en iyi performansı gösteren modeli belirlemek amacıyla **5 farklı derin öğrenme mimarisi** uygulanacak ve karşılaştırılacaktır.
 
 ###  Segmentasyon Sınıfları
-Modeller aşağıdaki 4 sınıfı ayırt etmek üzere eğitilmiştir:
+Modeller aşağıdaki 4 sınıfı ayırt etmek üzere eğitilmiştir: ##
 0. **Arka Plan (Background)**
 1. **Sağ Ventrikül (RV)**
 2. **Miyokard - Kalp Kası (Myo)**
